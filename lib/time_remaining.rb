@@ -1,4 +1,4 @@
-#require "time_remaining/version"
+require "time_remaining/version"
 require 'rubygems'
 require 'algorithms'
 require 'time_diff'
