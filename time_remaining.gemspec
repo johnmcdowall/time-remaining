@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = TimeRemaining::VERSION
   s.authors     = ["johnmcdowall"]
   s.email       = ["john@mcdowall.info"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/johnmcdowall/time-remaining"
+  s.summary     = %q{Determine the time remaining to complete a list of tasks when the total number of tasks and the number of tasks completed are known.}
+  s.description = %q{This gem uses a moving average of previous task execution durations and how much work is still remaining to calculate how long it will take to finish the remaining tasks.}
 
   s.rubyforge_project = "time_remaining"
 
