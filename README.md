@@ -4,8 +4,37 @@ T I M E - R E M A I N I N G
 Given a process that will take some amount of time, and we know how much we have done, 
 and how much is still to do, what is the time remaining for the process to reach completion?
 
-C O N T R I B U T I N G to T I M E - R E M A I N I N G
-------------------------------------------------------
+U S A G E
+-----------
+
+	time_remaining = TimeRemaining.new
+	tasks_done = 0.0
+	total_tasks = 20.0
+	tasks_remaining = total_tasks
+
+	def do_task
+	  sleep (1 + rand(2))
+	end
+
+	while( tasks_done < total_tasks ) do
+	  do_task( )						# Do whatever it is, transfer a byte, check a file etc.
+	  tasks_done+=1
+	  tasks_remaining-=1
+
+	  time_remaining.add ( (tasks_done/total_tasks).to_f )
+
+	  p Time.now.to_s + " | " + time_remaining.completed_at.to_s       	# Prints "2011-06-22 22:45:38 -0400"
+	  p time_remaining                                                  # Prints "03:01:00"
+	end
+	
+	
+R U N N I N G  T H E  T E S T  S U I T E
+----------------------------------------
+
+	rspec spec
+
+C O N T R I B U T I N G  to  T I M E - R E M A I N I N G
+--------------------------------------------------------
 
 * Check out the latest master to make sure the feature hasn’t been implemented or the bug hasn’t been fixed yet
 * Check out the issue tracker to make sure someone already hasn’t requested it and/or contributed it
