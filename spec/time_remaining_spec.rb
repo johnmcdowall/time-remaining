@@ -2,7 +2,7 @@ require "./lib/time_remaining"
 
 describe "The Time Remaining class" do
   
-  let(:time_remaining) { TimeRemaining.new}
+  let(:time_remaining) { McDowall::TimeRemaining.new }
   
   describe "when no data has accumulated" do
     it "should return 99999 as estimated finish time" do
