@@ -1,5 +1,13 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
+
+begin
+ require 'psych'
+ rescue ::LoadError
+end
+
+require 'yaml'
+
 require "time_remaining/version"
 
 Gem::Specification.new do |s|
