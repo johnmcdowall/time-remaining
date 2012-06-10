@@ -7,8 +7,7 @@ and how much is still to do, what is the time remaining for the process to reach
 U S A G E
 -----------
  
-  require 'time_remaining'_
-
+  require 'time_remaining'
 	time_remaining = McDowall::TimeRemaining.new
 	tasks_done = 0.0
 	total_tasks = 20.0
